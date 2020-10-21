@@ -1,11 +1,7 @@
 import './style.css';
 
-const body = document.querySelector('body');
+const body = document.body;
 const toggle = document.querySelector('#mode-toggle input');
-
-function toggleMode() {
-    setMode(toggle.checked ? 'light' : 'dark');
-}
 
 function setMode(mode) {
     localStorage.setItem('mode', mode);
@@ -19,16 +15,18 @@ function setMode(mode) {
     }
 }
 
-window.matchMedia('(prefers-color-scheme: light)').addListener(
-    e => setMode(e.matches ? 'light' : 'dark')
-);
-
 window.onload = (event) => {
-    let saved = localStorage.getItem('mode');
-    let preferred = window.matchMedia('prefers-color-scheme: light').matches ? 'light' : 'dark';
+    const saved = localStorage.getItem('mode');
+    const preferred = window.matchMedia('prefers-color-scheme: light').matches ? 'light' : 'dark';
     setMode(saved || preferred);
 
     // Enable transitions after we've set the initial state
     // Don't want to see the transitions on page load!
     setTimeout(() => body.classList.remove('no-transitions'), 300);
+
+    toggle.addEventListener('change',
+        () => setMode(toggle.checked ? 'light' : 'dark'));
+
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change',
+        e => setMode(e.matches ? 'light' : 'dark'));
 }
