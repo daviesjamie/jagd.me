@@ -109,23 +109,20 @@ section {
 }
 
 #contact ul {
-    column-gap: 24px;
-    columns: 4 auto;
-    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-@media screen and (max-width:719px) {
-    #contact ul {
-        columns: 3 auto;
-    }
+#contact ul li {
+    display: inline-block;
 }
 
-@media screen and (max-width:450px) {
-    #contact ul {
-        columns: 1 auto;
-    }
+#contact ul li:before {
+    content: '|';
+}
+
+#contact ul li:first-child:before {
+    content: '';
 }
 
 #mode-toggle {
