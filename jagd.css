@@ -1,14 +1,32 @@
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400);
 
-html,
+:root {
+    --dark-color: #16191b;
+    --light-color: #e2e6e8;
+    --bg-color: var(--dark-color);
+    --fg-color: var(--light-color);
+}
+
+.light {
+    --bg-color: var(--light-color);
+    --fg-color: var(--dark-color);
+}
+
+.no-transitions,
+.no-transitions *,
+.no-transitions *:before {
+    transition: none !important;
+}
+
 body {
-    background: #16191b;
-    color: #e2e6e8;
+    background: var(--bg-color);
+    color: var(--fg-color);
     counter-reset: section;
     font-family: IBM Plex Mono, monospace;
     font-weight: 300;
     height: 100%;
     margin: 0;
+    transition: 0.3s;
 }
 
 p {
@@ -22,7 +40,7 @@ a {
 }
 
 a:after {
-    background: #e2e6e8;
+    background: var(--fg-color);
     bottom: -2px;
     content: '';
     height: 1px;
@@ -53,8 +71,7 @@ section {
     position: relative;
 }
 
-section .section-title {
-    color: #e2e6e8;
+.section-title {
     counter-increment: section;
     font-size: 10px;
     font-weight: 200;
@@ -63,7 +80,7 @@ section .section-title {
     text-transform: uppercase;
 }
 
-section .section-title:before {
+.section-title:before {
     content: counter(section, decimal-leading-zero) ". ";
 }
 
@@ -109,4 +126,51 @@ section .section-title:before {
     #contact ul {
         columns: 1 auto;
     }
+}
+
+#mode-toggle {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.switch {
+    display: inline-block;
+    height: 17px;
+    position: relative;
+    width: 30px;
+}
+
+.switch input {
+    height: 0;
+    opacity: 0;
+    width: 0;
+}
+
+.slider {
+    border-radius: 15px;
+    border: 1px solid var(--fg-color);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 1px;
+    background-color: var(--fg-color);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+#mode-toggle input:checked + .slider:before {
+    transform: translateX(12px);
 }
