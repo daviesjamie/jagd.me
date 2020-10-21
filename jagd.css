@@ -90,7 +90,7 @@ section {
         margin: 0;
         position: absolute;
         text-align: right;
-        top: 2px;
+        top: 3px;
         transform: translate(-100%);
     }
 }
@@ -127,8 +127,8 @@ section {
 
 #mode-toggle {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 15px;
+    right: 20px;
 }
 
 .switch {
