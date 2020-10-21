@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,300,400,500);
+
+html,
+body {
+    background: #16191b;
+    color: #e2e6e8;
+    counter-reset: section;
+    font-family: IBM Plex Mono, monospace;
+    font-weight: 300;
+    height: 100%;
+    margin: 0;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: 720px;
+    padding: 24px 16px;
+    width: 100%;
+}
+
+section {
+    position: relative;
+}
+
+section .section-title {
+    counter-increment: section;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 10px;
+    opacity: .2;
+    color: #e2e6e8;
+    font-weight: 200;
+}
+
+section .section-title:before {
+    content: counter(section, decimal-leading-zero) ". ";
+}
+
+@media screen and (min-width:870px) {
+    section .section-title:before {
+        content: none;
+    }
+
+    section .section-title:after {
+        content: "_" counter(section, decimal-leading-zero);
+    }
+
+    .section-title {
+        margin: 0;
+        text-align: right;
+        transform: translate(-100%);
+        position: absolute;
+        left: -16px;
+        top: 2px;
+    }
+}
+
+#greeting {
+    font-size: 24px;
+}
+
+#info {
+    font-size: 14px;
+    margin: 40px 0 32px;
+}
+
+#contact {
+    font-size: 13px;
+}
+
+#contact ul {
+    column-gap: 24px;
+    columns: 4 auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media screen and (max-width:719px) {
+    #contact ul {
+        columns: 3 auto;
+    }
+}
+
+@media screen and (max-width:450px) {
+    #contact ul {
+        columns: 1 auto;
+    }
+}
