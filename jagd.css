@@ -67,15 +67,7 @@ section .section-title:before {
     content: counter(section, decimal-leading-zero) ". ";
 }
 
-@media screen and (min-width:870px) {
-    section .section-title:before {
-        content: none;
-    }
-
-    section .section-title:after {
-        content: "_" counter(section, decimal-leading-zero);
-    }
-
+@media screen and (min-width:919px) {
     .section-title {
         left: -16px;
         margin: 0;
