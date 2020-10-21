@@ -119,10 +119,12 @@ section {
 
 #contact ul li:before {
     content: '|';
+    padding: 0 1em;
 }
 
 #contact ul li:first-child:before {
     content: '';
+    padding: 0;
 }
 
 #mode-toggle {
