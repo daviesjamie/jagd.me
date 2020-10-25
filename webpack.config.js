@@ -1,10 +1,10 @@
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   output: {
-    filename: "jagd.js",
+    filename: 'jagd.js',
   },
   module: {
     rules: [
@@ -12,12 +12,12 @@ module.exports = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
+          'css-loader',
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [["autoprefixer"]],
+                plugins: [['autoprefixer']],
               },
             },
           },
@@ -27,7 +27,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
           },
@@ -37,13 +37,10 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    minimizer: [
-      `...`,
-      new CssMinimizerPlugin(),
-    ],
+    minimizer: [`...`, new CssMinimizerPlugin()],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./src/index.html" }),
-    new MiniCssExtractPlugin({ filename: "jagd.css" }),
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new MiniCssExtractPlugin({ filename: 'jagd.css' }),
   ],
 };
