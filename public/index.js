@@ -1,5 +1,3 @@
-import './style.css';
-
 const { body } = document;
 const toggle = document.querySelector('#mode-toggle input');
 
