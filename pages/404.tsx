@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/Link';
+import Layout from '../components/Layout';
 
 export default function NotFound() {
   return (
@@ -8,24 +9,15 @@ export default function NotFound() {
         <title>{'404 | Jamie Davies'}</title>
       </Head>
 
-      <div id="mode-toggle">
-        <label className="switch">
-          <input type="checkbox" />
-          <span className="slider"></span>
-        </label>
-      </div>
+      <Layout>
+        <h1>{'404'}</h1>
 
-      <div className="container">
-        <div className="wrapper">
-          <h1>{'404'}</h1>
+        <p>{"This isn't the page you're looking for."}</p>
 
-          <p>{"This isn't the page you're looking for."}</p>
-
-          <p>
-            <Link href="/">{'Return'}</Link>
-          </p>
-        </div>
-      </div>
+        <p>
+          <Link href="/">{'Return'}</Link>
+        </p>
+      </Layout>
     </>
   );
 }
