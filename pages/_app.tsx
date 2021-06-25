@@ -13,6 +13,7 @@ function JagdApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
+      <script async src="/index.js" />
     </>
   );
 }

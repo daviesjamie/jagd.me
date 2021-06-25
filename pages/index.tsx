@@ -56,8 +56,6 @@ export default function Home() {
           </section>
         </div>
       </div>
-
-      <script async src="/index.js" />
     </>
   );
 }
