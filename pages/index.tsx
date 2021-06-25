@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </div>
 
-      <script src="/index.js" />
+      <script async src="/index.js" />
     </>
   )
 }
