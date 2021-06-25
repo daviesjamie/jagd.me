@@ -11,7 +11,7 @@ export default function NotFound() {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
         />
 
-        <title>404 | Jamie Davies</title>
+        <title>{"404 | Jamie Davies"}</title>
       </Head>
 
       <div id="mode-toggle">
@@ -23,7 +23,7 @@ export default function NotFound() {
 
       <div className="container">
         <div className="wrapper">
-          <h1>404</h1>
+          <h1>{"404"}</h1>
 
           <p>{"This isn't the page you're looking for."}</p>
 
