@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import Section from '../components/Section';
 
 export default function Home() {
   return (
@@ -9,12 +10,11 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <section id="greeting">
+        <Section id="greeting">
           <span>{'Hello'}</span>
-        </section>
+        </Section>
 
-        <section id="info">
-          <h3 className="section-title">{'Info'}</h3>
+        <Section id="info" title="Info">
           <p>
             {`I'm Jamie Davies, a full-stack developer who likes to mix code,
             devops, design and coffee to create things that help people. I
@@ -23,10 +23,9 @@ export default function Home() {
             {` in the lovely city of Bath, where I create and maintain systems
             to fight malware and block phishing attacks on iOS.`}
           </p>
-        </section>
+        </Section>
 
-        <section id="contact">
-          <h3 className="section-title">{'Contact'}</h3>
+        <Section id="contact" title="Contact">
           <ul>
             <li>
               <a href="mailto:hi@jagd.me">{'Email'}</a>
@@ -45,7 +44,7 @@ export default function Home() {
               </a>
             </li>
           </ul>
-        </section>
+        </Section>
       </Layout>
     </>
   );
