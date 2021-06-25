@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import ModeToggle from './ModeToggle';
 
 interface Props {
   children: ReactNode;
@@ -7,12 +8,7 @@ interface Props {
 export default function Layout({ children }: Props) {
   return (
     <>
-      <div id="mode-toggle">
-        <label className="switch">
-          <input type="checkbox" />
-          <span className="slider"></span>
-        </label>
-      </div>
+      <ModeToggle />
 
       <div className="container">
         <div className="wrapper">{children}</div>
