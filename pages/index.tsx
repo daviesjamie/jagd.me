@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
+import LinkList from '../components/LinkList';
 
 export default function Home() {
   return (
@@ -26,24 +27,11 @@ export default function Home() {
         </Section>
 
         <Section id="contact" title="Contact">
-          <ul>
-            <li>
-              <a href="mailto:hi@jagd.me">{'Email'}</a>
-            </li>
-            <li>
-              <a href="https://github.com/daviesjamie/">{'GitHub'}</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/daviesjamie/">
-                {'LinkedIn'}
-              </a>
-            </li>
-            <li>
-              <a href="https://www.strava.com/athletes/daviesjamie">
-                {'Strava'}
-              </a>
-            </li>
-          </ul>
+          <LinkList links={[
+            { href: "mailto:hi@jagd.me", title: "Email" },
+            { href: "https://github.com/daviesjamie/", title: "GitHub" },
+            { href: "https://www.linkedin.com/in/daviesjamie/", title: "LinkedIn" },
+          ]} />
         </Section>
       </Layout>
     </>
