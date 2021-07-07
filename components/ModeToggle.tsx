@@ -1,9 +1,11 @@
+import styles from "../styles/ModeToggle.module.css";
+
 export default function ModeToggle() {
   return (
-    <div id="mode-toggle">
-      <label className="switch">
+    <div id="mode-toggle" className={styles.modeToggle}>
+      <label className={styles.switch}>
         <input type="checkbox" />
-        <span className="slider"></span>
+        <span className={styles.slider}></span>
       </label>
     </div>
   );

@@ -1,3 +1,5 @@
+import styles from '../styles/LinkList.module.css';
+
 interface Link {
   href: string;
   title: string;
@@ -19,7 +21,7 @@ export default function LinkList({ links }: Props) {
   });
 
   return (
-    <ul>
+    <ul className={styles.horizontalList}>
       {items}
     </ul>
   );

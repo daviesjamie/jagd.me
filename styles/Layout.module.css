@@ -1,0 +1,12 @@
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: 720px;
+  padding: 24px 16px;
+  width: 100%;
+}

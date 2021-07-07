@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import styles from "../styles/Section.module.css";
 
 interface Props {
   children: ReactNode;
@@ -8,8 +9,8 @@ interface Props {
 
 export default function Section({ children, id, title }: Props) {
   return (
-    <section id={id}>
-      {!!title && <h3 className="section-title">{title}</h3>}
+    <section id={id} className={styles.section}>
+      {!!title && <h3 className={styles.sectionTitle}>{title}</h3>}
       {children}
     </section>
   );
