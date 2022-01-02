@@ -20,10 +20,6 @@ window.onload = () => {
     : 'dark';
   setMode(saved || preferred);
 
-  // Enable transitions after we've set the initial state
-  // Don't want to see the transitions on page load!
-  setTimeout(() => body.classList.remove('no-transitions'), 300);
-
   toggle.addEventListener('change', () =>
     setMode(toggle.checked ? 'light' : 'dark')
   );
