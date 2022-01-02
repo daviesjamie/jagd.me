@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
 
 import '../styles/globals.css';
