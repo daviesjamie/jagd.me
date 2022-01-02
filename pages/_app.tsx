@@ -1,21 +1,13 @@
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
+import { ThemeProvider } from 'next-themes';
 
 import '../styles/globals.css';
 
 function JagdApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
-        />
-      </Head>
+    <ThemeProvider attribute="class" defaultTheme="system">
       <Component {...pageProps} />
-      <script async src="/index.js" />
-    </>
+    </ThemeProvider>
   );
 }
 export default JagdApp;

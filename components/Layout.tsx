@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import ModeToggle from './ModeToggle';
+
+import ThemeToggle from './ThemeToggle';
 
 interface Props {
   children: ReactNode;
@@ -8,7 +9,7 @@ interface Props {
 export default function Layout({ children }: Props) {
   return (
     <>
-      <ModeToggle />
+      <ThemeToggle />
 
       <div>
         <div>{children}</div>
