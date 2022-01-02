@@ -27,11 +27,16 @@ export default function Home() {
         </Section>
 
         <Section id="contact" title="Contact">
-          <LinkList links={[
-            { href: "mailto:hi@jagd.me", title: "Email" },
-            { href: "https://github.com/daviesjamie/", title: "GitHub" },
-            { href: "https://www.linkedin.com/in/daviesjamie/", title: "LinkedIn" },
-          ]} />
+          <LinkList
+            links={[
+              { href: 'mailto:hi@jagd.me', title: 'Email' },
+              { href: 'https://github.com/daviesjamie/', title: 'GitHub' },
+              {
+                href: 'https://www.linkedin.com/in/daviesjamie/',
+                title: 'LinkedIn',
+              },
+            ]}
+          />
         </Section>
       </Layout>
     </>

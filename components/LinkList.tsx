@@ -18,9 +18,5 @@ export default function LinkList({ links }: Props) {
     );
   });
 
-  return (
-    <ul>
-      {items}
-    </ul>
-  );
+  return <ul>{items}</ul>;
 }
