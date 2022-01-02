@@ -1,4 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   darkMode: 'class',
@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['IBM Plex Mono', ...defaultTheme.fontFamily.mono]
-      }
+        mono: ['IBM Plex Mono', ...defaultTheme.fontFamily.mono],
+      },
     },
   },
   plugins: [],

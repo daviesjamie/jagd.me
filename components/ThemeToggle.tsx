@@ -9,7 +9,7 @@ const ThemeToggle = () => {
   if (!mounted) return null;
 
   return (
-    <label className='absolute top-0.5 right-8 cursor-pointer'>
+    <label className="absolute top-0.5 right-8 cursor-pointer">
       <input
         type="checkbox"
         className="appearance-none peer"

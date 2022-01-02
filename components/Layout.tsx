@@ -11,8 +11,8 @@ export default function Layout({ children }: Props) {
     <>
       <ThemeToggle />
 
-      <div>
-        <div>{children}</div>
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="max-w-3xl p-4">{children}</div>
       </div>
     </>
   );
