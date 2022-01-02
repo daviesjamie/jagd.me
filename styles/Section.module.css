@@ -1,0 +1,27 @@
+.section {
+  position: relative;
+}
+
+.sectionTitle {
+  counter-increment: section;
+  font-size: 10px;
+  font-weight: 200;
+  letter-spacing: 0.15em;
+  opacity: 0.2;
+  text-transform: uppercase;
+}
+
+.sectionTitle:before {
+  content: counter(section, decimal-leading-zero) '. ';
+}
+
+@media screen and (min-width: 919px) {
+  .sectionTitle {
+    left: -16px;
+    margin: 0;
+    position: absolute;
+    text-align: right;
+    top: 3px;
+    transform: translate(-100%);
+  }
+}

@@ -1,0 +1,46 @@
+.modeToggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.switch {
+  display: inline-block;
+  height: 17px;
+  position: relative;
+  width: 30px;
+}
+
+.switch input {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.slider {
+  border-radius: 15px;
+  border: 1px solid var(--fg-color);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 1px;
+  background-color: var(--fg-color);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.modeToggle input:checked + .slider:before {
+  transform: translateX(12px);
+}
