@@ -14,7 +14,7 @@ const ThemeToggle = () => {
         type="checkbox"
         className="appearance-none peer"
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        checked={theme === 'light'}
+        defaultChecked={theme === 'light'}
       />
       <span
         className={
