@@ -12,7 +12,10 @@ interface Props {
 export default function LinkList({ links }: Props) {
   const items = links.map((link) => {
     return (
-      <li key={link.title}>
+      <li
+        key={link.title}
+        className="inline-block before:content-['|'] before:px-3 first:before:content-none"
+      >
         <Link href={link.href} title={link.title}>
           {link.title}
         </Link>
