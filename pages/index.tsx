@@ -12,11 +12,11 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <Section>
-          <span className="text-2xl">{'Hello'}</span>
+        <Section className="mb-10">
+          <span className="text-2xl">{'Hello.'}</span>
         </Section>
 
-        <Section title="Info">
+        <Section title="Info" className="mb-5">
           <p className="text-sm">
             {`I'm Jamie Davies, a full-stack developer who likes to mix code,
             devops, design and coffee to create things that help people. I
