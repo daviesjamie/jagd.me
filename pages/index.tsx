@@ -18,12 +18,11 @@ export default function Home() {
 
         <Section title="Info" className="mb-5">
           <p className="text-sm">
-            {`I'm Jamie Davies, a full-stack developer who likes to mix code,
-            devops, design and coffee to create things that help people. I
-            currently work for `}
+            {`I'm Jamie Davies, a full-stack developer who likes to mix code, devops, design and coffee to create things that help people. I'm currently modernising legacy government applications with `}
+            <Link href="https://www.madetech.com">{'Made Tech'}</Link>
+            {`, and previously I fought malware and blocked phishing attacks on iOS at `}
             <Link href="https://www.netcraft.com/">{'Netcraft'}</Link>
-            {` in the lovely city of Bath, where I create and maintain systems
-            to fight malware and block phishing attacks on iOS.`}
+            {`.`}
           </p>
         </Section>
 
