@@ -8,13 +8,15 @@ const ThemeToggle = () => {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
+  const isDark = theme === 'dark' || document.documentElement.classList.contains('dark')
+
   return (
     <label className="absolute top-0.5 right-8 cursor-pointer">
       <input
         type="checkbox"
         className="appearance-none peer"
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        defaultChecked={theme === 'light'}
+        onChange={() => setTheme(isDark ? 'light' : 'dark')}
+        checked={!isDark}
       />
       <span
         className={
