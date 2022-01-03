@@ -1,16 +1,15 @@
-import { ReactNode } from 'react';
-import styles from "../styles/Section.module.css";
-
-interface Props {
-  children: ReactNode;
-  id: string;
-  title?: string;
-}
-
-export default function Section({ children, id, title }: Props) {
+export default function Section({
+  children,
+  title,
+  ...props
+}: React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>) {
   return (
-    <section id={id} className={styles.section}>
-      {!!title && <h3 className={styles.sectionTitle}>{title}</h3>}
+    <section {...props}>
+      {!!title && (
+        <h3 className="text-xs uppercase tracking-widest font-extralight mb-1.5 lg:mb-0 lg:text-right lg:-translate-x-full lg:absolute lg:pt-0.5 lg:pr-5 text-zinc-400 dark:text-zinc-600 transition-colors duration-300 ease-in-out before:content-['//_']">
+          {title}
+        </h3>
+      )}
       {children}
     </section>
   );

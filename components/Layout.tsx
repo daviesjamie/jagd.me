@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import ModeToggle from './ModeToggle';
-import styles from "../styles/Layout.module.css";
+
+import ThemeToggle from './ThemeToggle';
 
 interface Props {
   children: ReactNode;
@@ -9,10 +9,10 @@ interface Props {
 export default function Layout({ children }: Props) {
   return (
     <>
-      <ModeToggle />
+      <ThemeToggle />
 
-      <div className={styles.container}>
-        <div className={styles.wrapper}>{children}</div>
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="max-w-3xl p-4">{children}</div>
       </div>
     </>
   );

@@ -1,28 +1,27 @@
-import styles from '../styles/LinkList.module.css';
+import Link from './Link';
 
-interface Link {
+interface LinkProps {
   href: string;
   title: string;
 }
 
 interface Props {
-  links: Link[];
+  links: LinkProps[];
 }
 
 export default function LinkList({ links }: Props) {
   const items = links.map((link) => {
     return (
-      <li key={link.title}>
-        <a href={link.href} title={link.title}>
+      <li
+        key={link.title}
+        className="inline-block before:content-['|'] before:px-3 first:before:content-none"
+      >
+        <Link href={link.href} title={link.title}>
           {link.title}
-        </a>
+        </Link>
       </li>
     );
   });
 
-  return (
-    <ul className={styles.horizontalList}>
-      {items}
-    </ul>
-  );
+  return <ul className="text-sm">{items}</ul>;
 }
