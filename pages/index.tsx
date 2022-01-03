@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import LinkList from '../components/LinkList';
+import Link from '../components/Link';
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
             {`I'm Jamie Davies, a full-stack developer who likes to mix code,
             devops, design and coffee to create things that help people. I
             currently work for `}
-            <a href="https://www.netcraft.com/">{'Netcraft'}</a>
+            <Link href="https://www.netcraft.com/">{'Netcraft'}</Link>
             {` in the lovely city of Bath, where I create and maintain systems
             to fight malware and block phishing attacks on iOS.`}
           </p>

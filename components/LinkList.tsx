@@ -1,26 +1,24 @@
-interface Link {
+import Link from "./Link";
+
+interface LinkProps {
   href: string;
   title: string;
 }
 
 interface Props {
-  links: Link[];
+  links: LinkProps[];
 }
 
 export default function LinkList({ links }: Props) {
   const items = links.map((link) => {
     return (
       <li key={link.title}>
-        <a
-          href={link.href}
-          title={link.title}
-          className="text-sm relative after:bg-zinc-400 after:dark:bg-zinc-600 after:-bottom-0.5 after:h-px after:absolute after:left-0 after:right-0"
-        >
+        <Link href={link.href} title={link.title}>
           {link.title}
-        </a>
+        </Link>
       </li>
     );
   });
 
-  return <ul>{items}</ul>;
+  return <ul className="text-sm">{items}</ul>;
 }
