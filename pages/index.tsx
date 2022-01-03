@@ -11,11 +11,11 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <Section id="greeting">
+        <Section>
           <span className="text-2xl">{'Hello'}</span>
         </Section>
 
-        <Section id="info" title="Info">
+        <Section title="Info">
           <p className="text-sm">
             {`I'm Jamie Davies, a full-stack developer who likes to mix code,
             devops, design and coffee to create things that help people. I
@@ -26,7 +26,7 @@ export default function Home() {
           </p>
         </Section>
 
-        <Section id="contact" title="Contact">
+        <Section title="Contact">
           <LinkList
             links={[
               { href: 'mailto:hi@jagd.me', title: 'Email' },
