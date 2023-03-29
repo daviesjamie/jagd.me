@@ -8,10 +8,13 @@
   },
   "author": "Jamie Davies",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
+    "format": "prettier --write --ignore-unknown .",
+    "format:check": "prettier --check --ignore-unknown .",
+    "lint": "next lint",
     "start": "next start",
-    "lint": "next lint"
+    "test": "npm run format:check && npm run lint"
   },
   "dependencies": {
     "@types/node": "18.15.11",
@@ -21,6 +24,7 @@
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
     "next-themes": "^0.2.1",
+    "prettier": "^2.8.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.2"
