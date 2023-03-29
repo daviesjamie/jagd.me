@@ -1,10 +1,10 @@
 {
   "name": "jagd.me",
-  "version": "3.0.0",
   "private": true,
+  "homepage": "https://jagd.me",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daviesjamie/jagd.me.git"
+    "url": "https://github.com/daviesjamie/jagd.me.git"
   },
   "author": "Jamie Davies",
   "scripts": {
