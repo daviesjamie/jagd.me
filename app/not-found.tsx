@@ -1,10 +1,10 @@
 // <title>{'404 | Jamie Davies'}</title>
 
-import Link from '@/components/Link';
+import Link from '@/components/Link'
 
 export const metadata = {
   title: '404',
-};
+}
 
 export default function NotFound() {
   return (
@@ -17,5 +17,5 @@ export default function NotFound() {
         <Link href="/">{'Return'}</Link>
       </p>
     </>
-  );
+  )
 }

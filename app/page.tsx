@@ -1,6 +1,6 @@
-import Link from '@/components/Link';
-import LinkList from '@/components/LinkList';
-import Section from '@/components/Section';
+import Link from '@/components/Link'
+import LinkList from '@/components/LinkList'
+import Section from '@/components/Section'
 
 export default function Home() {
   return (
@@ -32,5 +32,5 @@ export default function Home() {
         />
       </Section>
     </>
-  );
+  )
 }

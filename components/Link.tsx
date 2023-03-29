@@ -11,6 +11,6 @@ const Link = ({
   >
     {children}
   </a>
-);
+)
 
-export default Link;
+export default Link

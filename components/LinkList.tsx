@@ -1,12 +1,12 @@
-import Link from '@/components/Link';
+import Link from '@/components/Link'
 
 interface LinkProps {
-  href: string;
-  title: string;
+  href: string
+  title: string
 }
 
 interface Props {
-  links: LinkProps[];
+  links: LinkProps[]
 }
 
 export default function LinkList({ links }: Props) {
@@ -20,8 +20,8 @@ export default function LinkList({ links }: Props) {
           {link.title}
         </Link>
       </li>
-    );
-  });
+    )
+  })
 
-  return <ul className="text-sm">{items}</ul>;
+  return <ul className="text-sm">{items}</ul>
 }

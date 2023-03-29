@@ -1,18 +1,18 @@
-'use client';
+'use client'
 
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 const ThemeToggle = () => {
-  const [mounted, setMounted] = useState(false);
-  const { setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { setTheme, resolvedTheme } = useTheme()
 
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
+  useEffect(() => setMounted(true), [])
+  if (!mounted) return null
 
-  const isDark = resolvedTheme === 'dark';
-  const oppositeTheme = isDark ? 'light' : 'dark';
-  const toggleTheme = () => setTheme(oppositeTheme);
+  const isDark = resolvedTheme === 'dark'
+  const oppositeTheme = isDark ? 'light' : 'dark'
+  const toggleTheme = () => setTheme(oppositeTheme)
 
   return (
     <label className="absolute top-0.5 right-8 cursor-pointer">
@@ -28,7 +28,7 @@ const ThemeToggle = () => {
         }
       />
     </label>
-  );
-};
+  )
+}
 
-export default ThemeToggle;
+export default ThemeToggle

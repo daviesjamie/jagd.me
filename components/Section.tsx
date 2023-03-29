@@ -12,5 +12,5 @@ export default function Section({
       )}
       {children}
     </section>
-  );
+  )
 }
