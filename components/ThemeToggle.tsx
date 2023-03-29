@@ -1,3 +1,5 @@
+'use client';
+
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
@@ -8,7 +10,8 @@ const ThemeToggle = () => {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  const isDark = theme === 'dark' || document.documentElement.classList.contains('dark')
+  const isDark =
+    theme === 'dark' || document.documentElement.classList.contains('dark');
 
   return (
     <label className="absolute top-0.5 right-8 cursor-pointer">
