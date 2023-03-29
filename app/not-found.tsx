@@ -9,7 +9,7 @@ export const metadata = {
 export default function NotFound() {
   return (
     <>
-      <h1 className="text-3xl mb-6">{'404'}</h1>
+      <h1 className="mb-6 text-3xl">{'404'}</h1>
 
       <p className="text-sm">{"This isn't the page you're looking for."}</p>
 

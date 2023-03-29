@@ -15,16 +15,16 @@ const ThemeToggle = () => {
   const toggleTheme = () => setTheme(oppositeTheme)
 
   return (
-    <label className="absolute top-0.5 right-8 cursor-pointer">
+    <label className="absolute right-8 top-0.5 cursor-pointer">
       <input
         type="checkbox"
-        className="appearance-none peer"
+        className="peer appearance-none"
         onChange={toggleTheme}
         checked={!isDark}
       />
       <span
         className={
-          'w-10 h-6 flex items-center p-1 border-[1px] border-zinc-800 dark:border-zinc-200 rounded-full duration-300 ease-in-out after:w-4 after:h-4 after:bg-zinc-800 after:dark:bg-zinc-200 after:duration-300 after:ease-in-out after:rounded-full peer-checked:after:translate-x-3.5'
+          'flex h-6 w-10 items-center rounded-full border-[1px] border-zinc-800 p-1 duration-300 ease-in-out after:h-4 after:w-4 after:rounded-full after:bg-zinc-800 after:duration-300 after:ease-in-out peer-checked:after:translate-x-3.5 dark:border-zinc-200 after:dark:bg-zinc-200'
         }
       />
     </label>

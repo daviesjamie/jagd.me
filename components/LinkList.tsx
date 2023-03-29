@@ -14,7 +14,7 @@ export default function LinkList({ links }: Props) {
     return (
       <li
         key={link.title}
-        className="inline-block before:content-['|'] before:px-3 first:before:content-none"
+        className="inline-block before:px-3 before:content-['|'] first:before:content-none"
       >
         <Link href={link.href} title={link.title}>
           {link.title}

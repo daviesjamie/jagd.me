@@ -18,11 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-zinc-200 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-200 font-mono font-light transition-colors duration-300 ease-in-out">
+      <body className="bg-zinc-200 font-mono font-light text-zinc-900 transition-colors duration-300 ease-in-out dark:bg-zinc-900 dark:text-zinc-200">
         <ThemeProvider attribute="class" defaultTheme="dark">
           <ThemeToggle />
 
-          <div className="flex justify-center items-center min-h-screen">
+          <div className="flex min-h-screen items-center justify-center">
             <div className="max-w-3xl p-4">{children}</div>
           </div>
         </ThemeProvider>
