@@ -10,7 +10,7 @@ export default function Home() {
       </Section>
 
       <Section title="Info" className="mb-5">
-        <p className="text-sm">
+        <p className="text-sm leading-relaxed">
           {`I'm Jamie Davies, a full-stack developer who likes to mix code, devops, design and coffee to create things that help people. I'm currently modernising legacy government applications with `}
           <Link href="https://www.madetech.com">{'Made Tech'}</Link>
           {`, and previously I fought malware and blocked phishing attacks on iOS at `}

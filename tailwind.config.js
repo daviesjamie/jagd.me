@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['IBM Plex Mono', ...defaultTheme.fontFamily.mono],
+        mono: [...defaultTheme.fontFamily.mono],
       },
     },
   },
