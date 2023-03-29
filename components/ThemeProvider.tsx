@@ -1,5 +1,8 @@
 'use client';
 
-import { ThemeProvider } from 'next-themes';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { ThemeProviderProps } from 'next-themes/dist/types';
 
-export default ThemeProvider;
+export function ThemeProvider(props: ThemeProviderProps) {
+  return <NextThemesProvider {...props} />;
+}

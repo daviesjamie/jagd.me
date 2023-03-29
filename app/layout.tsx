@@ -1,4 +1,4 @@
-import ThemeProvider from '@/components/ThemeProvider';
+import { ThemeProvider } from '@/components/ThemeProvider';
 import ThemeToggle from '@/components/ThemeToggle';
 import './globals.css';
 
@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="bg-zinc-200 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-200 font-mono font-light transition-colors duration-300 ease-in-out">
-        <ThemeProvider attribute="class" defaultTheme="system">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ThemeToggle />
 
           <div className="flex justify-center items-center min-h-screen">

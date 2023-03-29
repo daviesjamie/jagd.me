@@ -5,20 +5,21 @@ import { useEffect, useState } from 'react';
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  const isDark =
-    theme === 'dark' || document.documentElement.classList.contains('dark');
+  const isDark = resolvedTheme === 'dark';
+  const oppositeTheme = isDark ? 'light' : 'dark';
+  const toggleTheme = () => setTheme(oppositeTheme);
 
   return (
     <label className="absolute top-0.5 right-8 cursor-pointer">
       <input
         type="checkbox"
         className="appearance-none peer"
-        onChange={() => setTheme(isDark ? 'light' : 'dark')}
+        onChange={toggleTheme}
         checked={!isDark}
       />
       <span
