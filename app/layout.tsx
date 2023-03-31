@@ -1,5 +1,6 @@
 import { ThemeProvider } from '@/components/ThemeProvider'
 import ThemeToggle from '@/components/ThemeToggle'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
 export const metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
             <div className="max-w-3xl p-4">{children}</div>
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
