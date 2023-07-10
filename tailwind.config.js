@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: [...defaultTheme.fontFamily.mono],
+        mono: ['var(--font-monolisa)', ...defaultTheme.fontFamily.mono],
       },
     },
   },
