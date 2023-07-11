@@ -12,6 +12,7 @@
     "dev": "next dev",
     "format": "prettier --write --ignore-unknown .",
     "format:check": "prettier --check --ignore-unknown .",
+    "install:fonts": "gpg -o fonts/MonoLisaVariableNormal.woff2 --batch --yes --passphrase $FONTS_PASSPHRASE -d fonts/MonoLisaVariableNormal.woff2.enc",
     "lint": "next lint",
     "lint-staged": "lint-staged",
     "start": "next start",

@@ -10,7 +10,7 @@
         pkgs = import nixpkgs { inherit system; };
       in {
         devShell = pkgs.mkShell {
-          buildInputs = with pkgs; [ nodejs ];
+          buildInputs = with pkgs; [ gnupg nodejs ];
         };
       });
 }
