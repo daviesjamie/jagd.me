@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://jagd.me/'
+languageCode = 'en-gb'
+title = 'jagd'
 theme = "jagd"
 
 [caches]

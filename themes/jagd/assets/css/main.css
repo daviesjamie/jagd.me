@@ -23,6 +23,9 @@
   --heading-color: var(--text-color);
   --link-color: var(--color-pine);
   --link-hover-color: var(--color-foam);
+  --link-hover-underline-color: var(--color-love);
+  --link-external-color: var(--color-muted);
+  --link-external-hover-color: var(--link-color);
 }
 
 html {
@@ -106,9 +109,33 @@ a {
 a:hover {
   color: var(--link-hover-color);
   text-decoration: underline;
-  text-decoration-color: var(--link-color);
+  text-decoration-color: var(--link-hover-underline-color);
+  text-decoration-thickness: 2px;
 }
 
-a[href^="http"]:where(:not([href*="jagd.me"]))::after {
+a[href^="http"]:where(:not([href*="jagd.me"]))::after,
+a[href^="mailto"]::after {
+  color: var(--link-external-color);
   content: "↗";
+}
+
+a[href^="http"]:where(:not([href*="jagd.me"])):hover::after,
+a[href^="mailto"]:hover::after {
+  color: var(--link-external-hover-color);
+}
+
+#home {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+#home h1 {
+  font-family: var(--font-main);
+  font-size: 24px;
+  letter-spacing: -1px;
+  text-transform: none;
 }
