@@ -1,0 +1,4 @@
+baseURL = "https://example.com"
+languageCode = "en-gb"
+theme = "jagd"
+title = "jagd"

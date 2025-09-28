@@ -1,0 +1,141 @@
+:root {
+  --width: 720px;
+
+  --font-main: MonoLisa, monospace, sans-serif;
+  --font-secondary: Tahoma, Verdana, sans-serif;
+  --font-scale: 14px;
+
+  /* Rose pine moon */
+  --color-base: #232136;
+  --color-overlay: #393552;
+  --color-muted: #6e6a86;
+  --color-subtle: #908caa;
+  --color-text: #e0def4;
+  --color-love: #eb6f92;
+  --color-gold: #f6c177;
+  --color-rose: #ea9a97;
+  --color-pine: #3e8fb0;
+  --color-foam: #9ccfd8;
+  --color-iris: #c4a7e7;
+
+  --background-color: var(--color-base);
+  --text-color: var(--color-text);
+  --heading-color: var(--text-color);
+  --link-color: var(--color-pine);
+  --link-hover-color: var(--color-foam);
+  --link-hover-underline-color: var(--color-love);
+  --link-external-color: var(--color-muted);
+  --link-external-hover-color: var(--link-color);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  word-break: break-word;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  font-size: var(--font-scale);
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  line-height: 1.5;
+  margin: auto;
+  max-width: var(--width);
+  overflow-wrap: break-word;
+  padding: 20px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+img,
+figure,
+video,
+table {
+  margin: 25px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--font-secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: calc(var(--font-scale) * 1.45);
+}
+
+h2 {
+  font-size: calc(var(--font-scale) * 1.35);
+}
+
+h3 {
+  font-size: calc(var(--font-scale) * 1.15);
+}
+
+h4,
+h5,
+h6 {
+  font-size: calc(var(--font-scale) * 1);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+  text-decoration-color: var(--link-hover-underline-color);
+  text-decoration-thickness: 2px;
+}
+
+a[href^="http"]:where(:not([href*="jagd.me"]))::after,
+a[href^="mailto"]::after {
+  color: var(--link-external-color);
+  content: "↗";
+}
+
+a[href^="http"]:where(:not([href*="jagd.me"])):hover::after,
+a[href^="mailto"]:hover::after {
+  color: var(--link-external-hover-color);
+}
+
+#home {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+#home h1 {
+  font-family: var(--font-main);
+  font-size: 24px;
+  letter-spacing: -1px;
+  text-transform: none;
+}

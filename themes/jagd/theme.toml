@@ -1,0 +1,6 @@
+name = "jagd"
+description = "A terminal-inspired Hugo theme based on Bear Blog"
+
+[author]
+  name = "Jamie Davies"
+  homepage = "https://jagd.me"

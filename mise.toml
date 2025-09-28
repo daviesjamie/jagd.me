@@ -1,3 +1,11 @@
 [tools]
 go = "1.25.0"
 "go:github.com/gohugoio/hugo" = { version = "v0.149.0" }
+
+[tasks.serve]
+description = "Run the Hugo development server for the site"
+run = "hugo server"
+
+[tasks.example]
+description = "Run the Hugo development server for the theme example site"
+run = "hugo server --source themes/jagd/exampleSite --themesDir ../.."

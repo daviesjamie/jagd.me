@@ -1,8 +1,8 @@
-baseURL = 'https://jagd.me/'
-languageCode = 'en-gb'
-title = 'jagd'
+baseURL = "https://jagd.me/"
+languageCode = "en-gb"
+title = "jagd"
 theme = "jagd"
 
 [caches]
   [caches.images]
-    dir = ':cacheDir/images'
+    dir = ":cacheDir/images"
