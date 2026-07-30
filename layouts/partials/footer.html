@@ -1,0 +1,17 @@
+<p>
+  <small>
+    {{if .GitInfo }}
+      {{ with .GitInfo }}
+        Last updated on {{ .AuthorDate.Format "2026-01-02" }} ({{ .AbbreviatedHash }})
+      {{ end }}
+    {{ else }}
+      <p>Else</p>
+    {{ end }}
+  </small>
+</p>
+<p>
+  Jamie Davies<br />
+  <small>
+    <a href="mailto:hi@jagd.me">Email</a> | <a href="https://github.com/daviesjamie/">GitHub</a> | <a href="https://www.linkedin.com/in/daviesjamie/">LinkedIn</a>
+  </small>
+</p>

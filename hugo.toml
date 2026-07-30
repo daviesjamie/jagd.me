@@ -1,3 +1,7 @@
 baseURL = 'https://jagd.me/'
-locale = 'en-gb'
 title = 'jagd'
+locale = 'en-GB'
+timeZone = 'Europe/London'
+
+enableEmoji = true
+enableGitInfo = true
