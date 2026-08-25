@@ -50,6 +50,7 @@
   a {
     color: var(--link-color);
     cursor: pointer;
+    font-weight: 500;
     text-decoration: none;
   }
 
@@ -156,4 +157,37 @@
     color: var(--visited-color);
   }
 
+  a[href^="https://monzo.com/"]:hover {
+    background-color: #FF4F41;
+    color: #fff;
+    margin: 0 -3px;
+    padding: 0 3px;
+    text-decoration: none;
+  }
+  a[href^="https://www.libraryofthings.co.uk/"] {
+    margin: 0 2px;
+    &:hover {
+      background-color: #fff;
+      border: 2px solid #000;
+      color: #000;
+      filter: drop-shadow(-4px 4px #000);
+      margin: 0 -3px;
+      padding: 0 3px;
+      text-decoration: none;
+    }
+  }
+  a[href^="https://www.madetech.com/"]:hover {
+    background-color: #06AC33;
+    color: #fff;
+    margin: 0 -3px;
+    padding: 0 3px;
+    text-decoration: none;
+  }
+  a[href^="https://www.netcraft.com/"]:hover {
+    background: linear-gradient(100deg, #8157c5 0%, #b34fa5 15%, #ff526c 28%, #ff7518 40%, #ffc20d 52%, #00ff24 67%, #00dc8a 80%, #68b9e9 92%, #78aaf0 100%);
+    color: #000;
+    margin: 0 -3px;
+    padding: 0 3px;
+    text-decoration: none;
+  }
 </style>
