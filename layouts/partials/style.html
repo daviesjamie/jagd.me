@@ -67,14 +67,12 @@
     --background-color: var(--rp-base);
     --heading-color: var(--rp-emphasis);
     --text-color: var(--rp-text);
-    --link-color: var(--rp-pine);
-    --link-hover-color: var(--rp-foam);
+    --link-color: var(--rp-foam);
     --visited-color: var(--rp-iris);
     --blockquote-color: var(--rp-muted);
 
     @media (prefers-color-scheme: dark) {
-      --link-color: var(--rp-foam);
-      --link-hover-color: var(--rp-pine);
+      --link-color: var(--rp-pine);
     }
   }
 
@@ -103,16 +101,17 @@
   }
 
   a {
-    color: var(--link-color);
+    color: var(--text-color);
     cursor: pointer;
     font-weight: 500;
+    text-decoration-color: var(--link-color);
     text-decoration-line: underline;
     text-decoration-thickness: 0.1em;
     text-underline-offset: 0.2em;
   }
 
   a:hover {
-    color: var(--link-hover-color);
+    color: var(--link-color);
   }
 
   nav a {
@@ -212,6 +211,10 @@
   }
 
   ul.blog-posts li a:visited {
+    text-decoration-color: var(--visited-color);
+  }
+
+  ul.blog-posts li a:visited:hover {
     color: var(--visited-color);
   }
 
