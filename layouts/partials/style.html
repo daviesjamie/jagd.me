@@ -151,7 +151,22 @@
   }
 
   table {
+    border-collapse: collapse;
+    margin: 1.5rem 0;
     width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid var(--rp-muted);
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  th {
+    background-color: var(--rp-base);
+    font-family: var(--font-main);
+    color: var(--heading-color);
   }
 
   hr {
@@ -164,10 +179,9 @@
   }
 
   blockquote {
-    border-left: 1px solid #999;
+    border-left: 3px solid var(--blockquote-color);
     color: var(--blockquote-color);
     padding-left: 20px;
-    font-style: italic;
   }
 
   pre {
@@ -192,6 +206,7 @@
 
   :not(.highlight) > pre,
   :not(.code) > pre {
+    {{- /* Make non-highlighted code blocks match colours with highlighted versions */ -}}
     background-color: #232137;
     color: #e0def4;
   }
@@ -214,7 +229,6 @@
     width: auto !important;
   }
 
-  /* blog post list */
   ul.blog-posts {
     list-style-type: none;
     padding: unset;

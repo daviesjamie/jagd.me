@@ -64,7 +64,6 @@ Tables aren't part of the core Markdown spec[^2], but Hugo supports supports the
 
    Name | Age
 --------|------
-
     Bob | 27
   Alice | 23
 
