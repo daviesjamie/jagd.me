@@ -58,7 +58,9 @@ The blockquote element represents content that is quoted from another source.
 
 ## Tables
 
-Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
+Tables aren't part of the core Markdown spec[^2], but Hugo supports supports them out-of-the-box.
+
+[^2]: The core markdown spec is available as a PDF [here](https://strictdoc.readthedocs.io/en/latest/latest/spec/Markdown-PDF.html).
 
    Name | Age
 --------|------
