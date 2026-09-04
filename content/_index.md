@@ -33,7 +33,7 @@ I'm also a bread-baking, badminton-playing, coffee-drinking, board-gaming, veget
       text-decoration: none;
 
       @media (prefers-color-scheme: dark) {
-        background-color: #000;
+        background-color: var(--background-color);
         border: 2px solid #fff;
         color: #fff;
         filter: drop-shadow(-4px 4px #fff);

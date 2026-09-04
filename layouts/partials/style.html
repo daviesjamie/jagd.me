@@ -111,7 +111,8 @@
     text-underline-offset: 0.2em;
   }
 
-  a:hover {
+  a:hover,
+  a:active {
     color: var(--link-color);
   }
 
@@ -246,7 +247,9 @@
     text-decoration-color: var(--visited-color);
   }
 
-  ul.blog-posts li a:visited:hover {
-    color: var(--visited-color);
+  ul.blog-posts li a:visited:hover,
+  ul.blog-posts li a:visited:active {
+    color: var(--link-color);
+    text-decoration-color: var(--link-color);
   }
 </style>
