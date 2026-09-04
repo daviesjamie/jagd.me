@@ -21,25 +21,26 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      /* Rosé Pine */
-      /* --rp-base: #191724; */
-      /* --rp-surface: #1f1d2e; */
-      /* --rp-overlay: #26233a; */
-      /* --rp-muted: #6e6a86; */
-      /* --rp-subtle: #908caa; */
-      /* --rp-text: #e0def4; */
-      /* --rp-emphasis: #dfdad9; */
-      /* --rp-love: #eb6f92; */
-      /* --rp-gold: #f6c177; */
-      /* --rp-rose: #ebbcba; */
-      /* --rp-pine: #31748f; */
-      /* --rp-foam: #9ccfd8; */
-      /* --rp-iris: #c4a7e7; */
-      /* --rp-highlight-low: #21202e; */
-      /* --rp-highlight-med: #403d52; */
-      /* --rp-highlight-high: #524f67; */
+      {{- /* Rose Pine
+      --rp-base: #191724;
+      --rp-surface: #1f1d2e;
+      --rp-overlay: #26233a;
+      --rp-muted: #6e6a86;
+      --rp-subtle: #908caa;
+      --rp-text: #e0def4;
+      --rp-emphasis: #dfdad9;
+      --rp-love: #eb6f92;
+      --rp-gold: #f6c177;
+      --rp-rose: #ebbcba;
+      --rp-pine: #31748f;
+      --rp-foam: #9ccfd8;
+      --rp-iris: #c4a7e7;
+      --rp-highlight-low: #21202e;
+      --rp-highlight-med: #403d52;
+      --rp-highlight-high: #524f67;
+      */ -}}
     
-      /* Rosé Pine Moon */
+      {{- /* Rosé Pine Moon */ -}}
       --rp-base: #232136;
       --rp-surface: #2a273f;
       --rp-overlay: #393552;
@@ -151,17 +152,37 @@
     max-width: 100%;
   }
 
-  code {
-    font-family: monospace;
-    padding: 2px;
-    border-radius: 3px;
-  }
-
   blockquote {
     border-left: 1px solid #999;
     color: var(--blockquote-color);
     padding-left: 20px;
     font-style: italic;
+  }
+
+  pre {
+    border-radius: 4px;
+    border: 1px solid var(--rp-muted);
+    box-sizing: border-box;
+    margin: 1.2em 0;
+    min-width: 100%;
+    overflow-x: auto;
+    padding: 1em;
+    width: 100%;
+  }
+
+  :not(pre) > code {
+    background-color: var(--rp-base);
+    border-radius: 3px;
+    border: 1px solid var(--rp-muted);
+    color: var(--rp-love);
+    font-family: monospace;
+    padding: 0.1em 0.3em;
+  }
+
+  :not(.highlight) > pre,
+  :not(.code) > pre {
+    background-color: #232137;
+    color: #e0def4;
   }
 
   footer {
@@ -180,20 +201,6 @@
 
   .inline {
     width: auto !important;
-  }
-
-  .highlight,
-  .code {
-    border-radius: 3px;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    overflow-x: auto;
-  }
-
-  .highlight pre,
-  .code pre {
-    min-width: 100%;
-    width: max-content;
   }
 
   /* blog post list */

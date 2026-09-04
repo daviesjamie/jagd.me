@@ -76,7 +76,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Code block with backticks
 
-```html
+```html {linenos=true hl_lines=[3,"6-8"]}
 <!doctype html>
 <html lang="en">
 <head>
