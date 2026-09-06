@@ -1,5 +1,4 @@
 +++
-layout = "list_single_hybrid"
 menu = "main"
 weight = 1
 +++

@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article>
+  <header>
+    <p class="date">
+      <i>
+        <time datetime='{{ .Date.Format "2006-01-02" }}'>
+          {{ .Date.Format (default "02 January, 2006" .Site.Params.dateFormat) }}
+        </time>
+      </i>
+    </p>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <content>
+    {{ .Content }}
+  </content>
+
+  <footer>
+    {{ if eq .Type "posts" }}{{ if (.Param "enablePostNavigator")}}
+    {{- partial "post_navigator.html" . -}}
+    {{ end }}{{ end }}
+
+    <p>
+      {{ range (.GetTerms "tags") }}
+      <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+      {{ end }}
+    </p>
+  </footer>
+</article>
+{{ end }}

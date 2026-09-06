@@ -1,0 +1,10 @@
+{{ define "main" }}
+<content>
+  {{ .Content }}
+</content>
+
+{{ if .Site.RegularPages }}
+  <hr />
+  {{- partial "list.html" .Site.RegularPages -}}
+{{ end }}
+{{ end }}
