@@ -9,3 +9,7 @@ enableEmoji = true
   [markup.highlight]
     lineNumbersInTable = false
     style = 'rose-pine-moon'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
