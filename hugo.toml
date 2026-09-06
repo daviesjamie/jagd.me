@@ -1,0 +1,11 @@
+baseURL = 'https://jagd.me/'
+title = 'jagd'
+locale = 'en-GB'
+timeZone = 'Europe/London'
+
+enableEmoji = true
+
+[markup]
+  [markup.highlight]
+    lineNumbersInTable = false
+    style = 'rose-pine-moon'
